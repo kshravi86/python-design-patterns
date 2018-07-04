@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+"""
+What is a tuple?
+-----------------
+A tuple is a lightweight object type which allows to store a sequence of immutable Python objects. They are just like
+lists but have a few key differences. The major one is that unlike lists, you can not change a value in a tuple.
+In order to access the value in a tuple you use integer indexes
+
+Problem with tuples?
+--------------------
+Remembering which index should be used for each value
+can lead to errors, especially if the tuple has a lot of fields and is constructed far from where it is used.
+
+Named Tuple:
+-------------
+A namedtuple assigns names, as well as the numerical index, to each member.
+
+Why use named tuples over dictionaries?
+---------------------------------------
+Namedtuple instances are just as memory efficient as regular tuples because they do not have per-instance dictionaries.
+Thus, they are lightweight and require no more memory than regular tuples. This makes them faster than dictionaries.
+
+Each kind of namedtuple is represented by its own class, created by using the namedtuple() factory function.
+The arguments are the name of the new class and a string containing the names of the elements.
+"""
+
+from collections import namedtuple
+
+# A named tuple has two required arguments. They are the tuple name and the tuple field_names.
+# Our tuple name was ‘Person’ and the tuple field_names were ‘name’, ‘age’ and ‘gender’.
+Person = namedtuple('Person', 'name age gender')
+print('Type of Person:', type(Person))
+
+bob = Person(name='Bob', age=30, gender='male')
+print(f'Representation: {bob}')
+
+# It is possible to access the fields of the namedtuple by name using dotted notation (obj.attr) as well as using the
+# positional indexes of standard tuples.
+jane = Person(name='Jane', age=29, gender='female')
+print(f'Field by name: {jane.name}')
+
+print('Fields by index:')
+for p in [ bob, jane ]:
+    print('%s is a %d year old %s' % p)
+
+# We can covert a named tuple to a dictionary using the _asdict() method
+print(bob._asdict())
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

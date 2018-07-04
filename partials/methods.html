@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+#!/bin/python3
+
+class Duck:
+    # the constructor
+    def __init__(self, number):
+        self.number = number
+
+    def quack(self):
+        print("Quaaack! - My number is", self.number)
+
+    def walk(self):
+        print("Walks like a duck. My number is", self.number)
+
+def main():
+    donald = Duck(47)
+    donald.quack()
+    donald.walk()
+
+    frank  = Duck(53)
+    frank.quack()
+    frank.walk()
+
+
+if __name__ == "__main__": main()
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

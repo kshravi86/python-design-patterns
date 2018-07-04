@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>     <link href="prism.css" rel="stylesheet"> <script type="text/javascript-lazy"  >  	var admobid = {}; if( /(android)/i.test(navigator.userAgent) ) {     admobid = {            banner: 'ca-app-pub-5830283354936773/5921375320',        interstitial: 'ca-app-pub-5830283354936773/1902239267'     }; } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {     admobid = {            banner: 'ca-app-pub-6869992474017983/4806197152',         interstitial: 'ca-app-pub-6869992474017983/7563979554'     }; } else {     admobid = {              banner: 'ca-app-pub-6869992474017983/8878394753',         interstitial: 'ca-app-pub-6869992474017983/1355127956'     }; } if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {     document.addEventListener('deviceready', initApp, false); } else {     initApp(); }  function initApp() {     if (! AdMob ) { alert( 'admob plugin not ready' ); return; }       AdMob.createBanner( {         adId: admobid.banner,         isTesting: false,         overlap: false,         offsetTopBar: false,         position: AdMob.AD_POSITION.BOTTOM_CENTER,         bgColor: 'black'     } );      AdMob.prepareInterstitial({         adId: admobid.interstitial,         autoShow: true     }); }    </script></head>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
   <body style="background-color:white;" >
-	
-	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
-	  <div class="topcoat-navigation-bar__item left quarter">
-		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
-		  <span class="topcoat-icon home-icon"></span>
-		</a>
-	  </div>
-	  <div class="topcoat-navigation-bar__item center half">
-		<h1 class="topcoat-navigation-bar__title">Cake</h1>
-	  </div>
-	</div>
-	
 	<script type="text/javascript" src="prism.js"></script>
 
 	<pre  ng-prism  class="language-python"><code>
@@ -22,29 +12,19 @@
 
 
 
-'''
-http://codeforces.com/problemset/problem/137/B
-Solution: Input the numbers as a integer list.
-Now, dump the numbers of list in a set (only if they are less than or equal to n ).
-The set preserves only the unique elements. The difference to list size (n) and set size is number of elements
-to be changed to be made valid permuation.
-'''
 
-if __name__ == "__main__":
-    nums = list()
-    n = int(raw_input())
-    unique_nums = set()
-    nums = map(int, raw_input().split(" "))
 
-    for k in nums:
-        if(k<=n):
-            unique_nums.add(k)
+# Given 2 strings, decide one is permutation of other.
 
-    print n-unique_nums.__len__()
-    
-    
-    
-    
-        </code></pre>
+def checkPermutation(str1, str2):
+	if len(str1) != len(str2):
+		return False
+	else:
+		return " ".join(sorted(str1)) == " ".join(sorted(str2))
+
+print(checkPermutation("abc", "bcc"))
+
+
+   </code></pre>
   </body>
 </html>		

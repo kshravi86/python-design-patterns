@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+import operator
+
+# Sort a List Alphabetically
+my_list = ['mango', 'apple', 'pear', 'orange']
+my_list.sort()
+for item in my_list:
+    print (item)
+"""
+Outputs:
+    apple
+    mango
+    orange
+    pear
+"""
+
+# Return a Copy of a List, Sorted Alphabetically
+my_list = ['mango', 'apple', 'pear', 'orange']
+my_sorted_list = sorted(my_list)
+for item in my_sorted_list:
+    print (item)
+"""
+Outputs:
+    apple
+    mango
+    orange
+    pear
+"""
+
+# Sort a List in Reverse Alphabetical Order
+my_list = ['mango', 'apple', 'pear', 'orange']
+my_list.sort(reverse=True)
+for item in my_list:
+    print (item)
+"""
+Outputs:
+    pear
+    orange
+    mango
+    apple
+"""
+
+# Return a copy of a List Sorted in Reverse Alphabetical Order
+my_list = ['mango', 'apple', 'pear', 'orange']
+my_sorted_list = sorted(my_list, reverse=True)
+for item in my_list:
+    print (item)
+"""
+Outputs:
+    pear
+    orange
+    mango
+    apple
+"""
+
+# Sort a List by a Child List's (or Tuple's) Value
+my_list = [
+    ['z', '3'],
+    ['a', '2'],
+    ['g', '4']
+]
+my_list.sort(key=operator.itemgetter(0))
+for item in my_list:
+    print (item)
+"""
+Outputs:
+    ['a', '2']
+    ['g', '4']
+    ['z', '3']
+"""
+
+# Sort a List by a Child List's (or Tuple's) Value in Reverse
+my_list = [
+    ['z', '3'],
+    ['a', '2'],
+    ['g', '4']
+]
+my_list.sort(reverse=True, key=operator.itemgetter(0))
+for item in my_list:
+    print (item)
+"""
+Outputs:
+    ['a', '2']
+    ['g', '4']
+    ['z', '3']
+"""
+
+# Sorting a list by the length of an inner list
+from collections import namedtuple
+result_row = namedtuple('ResultRow', ['cell_count', 'reason', 'results'])
+a = result_row(cell_count=4, reason='AfternoonSnackManager', results=[1,2,4,5,6])
+b = result_row(cell_count=4, reason='LunchManager', results=[1,2])
+c = result_row(cell_count=4, reason='DinnerManager', results=[1,2,4,5])
+rows = [a, b, c]
+print(sorted(rows, key=lambda x: len(x.results)), end='\n')
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

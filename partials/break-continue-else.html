@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+
+
+
+#!/bin/python3
+
+def main():
+    s = 'this is a string'
+    print("The entire string", s)
+    print("Now skipp all s letters", s)
+    for c in s:
+        # skip the letter 's'
+        if c == 's': continue
+        print(c, end='')
+    print()
+
+    print("Stop iterating at the first letter s")
+    for c in s:
+        # break out of the loop at the letter 's'
+        if c == 's': break
+        print(c, end='')
+    print()
+
+    print("Use else")
+    for c in s:
+        print(c, end='')
+    else:                               # gets invoked when iteration stops (or never starts)
+        print('<< iteration is over')
+
+    print("Use else with a while loop")
+    i = 0
+    while (i < len(s)):
+        print(s[i], end='')
+        i += 1
+    else:
+        print('<< iteration is over')
+   
+
+if __name__ == "__main__": main()
+
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

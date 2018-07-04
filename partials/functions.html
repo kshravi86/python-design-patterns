@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+
+
+#!/bin/python3
+
+def main():
+    func()
+    func_param(1)
+    func_param()                    # the input parameter (a) assumes the default value (7) during this call
+    func_param(5)
+
+def func():
+    for i in range(10):             # range(n) produces a range from 0 to n-1
+        print(i, end = ' ')         # end = char, print statement ends with the specified character instead of default newline
+    print()                         # this prints a newline at the end of the space-separated list
+
+def func_param(a=7):
+    for i in range(a, 10):
+        print(i, end=' ')
+    print()
+
+if __name__ == "__main__": main()
+
+
+
+        </code></pre>
+  </body>
+</html>		

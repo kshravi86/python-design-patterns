@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+#!/bin/python3
+
+a, b = 0, 1     # note the multiple assignment syntax
+
+# note that the "string".format() is a method of a string class
+
+if a < b:   # colon followed by the code that is indented (this is called suite in python)
+    print('a ({}) is less than b ({})'.format(a, b))    # {} is replaced with values of a and b, respectively
+else:       # colon followed by another indented block of code
+    print('a ({}) is not less than b ({})'.format(a, b))
+
+# conditional expression (resemples C, but with a different syntax)
+print("a is less than b" if a < b else "a is not less than b")
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

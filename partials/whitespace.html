@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+#!/usr/bin/python3
+
+def main():
+    print("This is the syntax.py")  # indented - tells Python that it's the body of the main() function
+    # if we indent this line differently (e.g. by 1, 2 or 3 spaces), Python will display a syntax error
+    print("This is another line.")
+    space()
+# This line doesn't belong to main() because it is not indented.
+print("This gets printed before the output main()")
+
+# A construct where a function consists of a single statement combined with the function definition/name:
+
+def space(): print("Another function")
+#           ^ - This space is insignificant, it can be removed altogether or there may be more spaces
+
+if __name__ == "__main__": main()
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

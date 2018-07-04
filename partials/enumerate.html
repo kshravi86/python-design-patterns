@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+
+
+
+cities = ['Athens', 'Paris', 'St Louis', 'London', 'Stockholm', 'Antwerp', 'Paris', 'Amsterdam',
+          'Los Angeles', 'Berlin', 'London', 'Helsinki', 'Melbourne / Stockholm', 'Rome', 'Tokyo',
+          'Mexico', 'Munich', 'Montreal', 'Moscow', 'Los Angeles', 'Seoul', 'Barcelona', 'Atlanta',
+          'Sydney', 'Athens', 'Beijing', 'London', 'Rio']
+years = ['1896', '1900', '1904', '1908', '1912', '1920', '1924', '1928', '1932', '1936', '1948',
+         '1952', '1956', '1960', '1964', '1968', '1972', '1976', '1980', '1984', '1988', '1992',
+         '1996', '2000', '2004', '2008', '2012', '2016']
+
+"""
+Enumerate allows us to iterate over tuples and their ordinal numbers.
+"""
+for i, city in enumerate(cities):
+    print(i, city)
+print()
+
+
+
+        </code></pre>
+  </body>
+</html>		

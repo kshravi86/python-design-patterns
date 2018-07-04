@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+"""
+If you create a regular dict, you will note that it is an unordered data collection. Every time you print it out, the
+order may be differen.
+
+An OrderedDict keeps track of the order of the keys as they are added.
+"""
+from collections import OrderedDict
+ordered_dict = OrderedDict()
+fruits = ['apple', 'banana', 'mango']
+for index, fruit in enumerate(fruits):
+    ordered_dict[fruit] = index
+print(ordered_dict) # Will print it in the order there were inserted
+
+"""
+Something else to note about OrderDicts is that when you go to compare two OrderedDicts, they will not only test the
+items for equality, but also that the order is correct. A regular dictionary only looks at the contents of the
+dictionary and doesn’t care about its order.
+"""
+a = OrderedDict({'apple': 0, 'banana': 1, 'mango': 2})
+b = OrderedDict({'banana': 1, 'mango': 2, 'apple': 0})
+print(a == b)
+
+"""
+OrderDicts have two new methods in Python 3: popitem and move_to_end. The popitem method will return and remove a
+(key, item) pair
+"""
+print(a.pop('apple'))
+print(a.pop('grapes'))  # KeyError when we try and pop a key that does not exist
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

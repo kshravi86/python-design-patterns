@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+
+"""
+LRU cache will “wrap a function with a memoizing callable that saves up to the maxsize most recent calls.
+In other words, it’s a decorator that adds caching to the function it decorates
+
+There is also a typed parameter that we can pass to the decorator. It is a Boolean that tells the decorator to cache
+arguments of different types separately if typed is set to True.
+"""
+from functools import lru_cache
+
+
+@lru_cache(maxsize=2)
+def sum_cached(a, b):
+    print(f'Calculating the sum of {a} and {b}')
+    return a + b
+
+# The first call with 2 and 2 results in the print statement and the result
+print(sum_cached(2, 2))
+
+# Subsequent calls with 2 and 2 do not result in the print statement since the method isn't called and we retrieve the
+# value from the cache
+print(sum_cached(2, 2))
+print(sum_cached(2, 2))
+
+# Filling up the cache with 2 other calls
+print(sum_cached(2, 3))
+print(sum_cached(2, 4))
+
+# Now we will not find the result of 2 and 2 in the cache and will thus get the print statement again
+print(sum_cached(2, 2))
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

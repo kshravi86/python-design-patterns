@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+#!/bin/python3
+
+def isprime(n):
+    if (n == 1):
+        print("1 is special")
+        return False
+    for x in range(2, n):
+        if n % x == 0:
+            print("{} equals {} x {}".format(n, x, n // x))
+            return False
+    print(n, "is a prime number")
+    return True
+
+for n in range(1, 20):
+    isprime(n)
+    
+    
+    
+        </code></pre>
+  </body>
+</html>		

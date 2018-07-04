@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+"""
+The collections module has a handy tool called defaultdict. The defaultdict is a subclass of Python’s dict that
+accepts a default_factory as its primary argument. The default_factory is usually a Python type, such as int or list,
+but you can also use a function or a lambda too.
+
+It’s basically impossible to cause a KeyError to happen as long as you set the default_factory to something that makes
+sense.
+"""
+from collections import defaultdict
+
+# Assume we have no Counter collection and we want to create a frequency distribution of the words appearing in a list
+frequency_distribution = {}
+words = ['gaurav', 'keswani', 'gaurav', 'yelp', 'snowflake', 'yelp', 'gaurav']
+for word in words:
+    # If the word is already present in the dictionary, increment the count by 1
+    if word in frequency_distribution:
+        frequency_distribution[word] += 1
+    # If the word is not present in the dictionary, set the count to 1 since this is the first occurence
+    else:
+        frequency_distribution[word] = 1
+print(frequency_distribution)
+
+# We can simplify the above process by using default dicts
+# Here we specify the default value type of the dict to be int. Thus, the default value of any key will be the default
+# value of type int i.e. 0
+frequency_distribution = defaultdict(int)
+for word in words:
+    # The first time a word is encountered, it won't be in the dictionary. Thus, it frequency_distribution[word] will
+    # have the value of 0 and will get 1 added to it.
+    # Thus, the defaultdict will automatically assign zero as the value to any key it doesn’t already have in it
+    frequency_distribution[word] += 1
+print(frequency_distribution)
+
+
+
+        </code></pre>
+  </body>
+</html>		
+

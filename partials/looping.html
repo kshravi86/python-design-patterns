@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+
+fibo_numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+line_break = "========================"
+
+# Iterating through the elements in a list
+for num in fibo_numbers:
+    print(num)
+print(line_break)
+
+# Iterating through the characters of a string
+for char in "Fibonacci":
+    print(char)
+print(line_break)
+
+
+"""
+We can sequentially loop over any iterator.
+
+For loops: Sequentially assign a value returned by the iterator to a variable and allow us access to
+the variable inside the scope of the iteration
+
+What is an iterator?
+    - Any object that defines __next__()
+    - The for loop calls the __next__() method repeatedly until StopIteration is returned
+"""
+it = iter("Fib")
+print(it.next())
+print(it.next())
+print(it.next())
+# print it.next()   # Would throw a StopIteration exception since we have run out of elements
+print(line_break)
+
+
+
+        </code></pre>
+  </body>
+</html>		

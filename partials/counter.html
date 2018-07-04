@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+"""
+The collections module also provides us with a neat little tool that supports convenient and fast tallies.
+This tool is called Counter. You can run it against most iterables
+"""
+
+from collections import Counter
+
+# Returns a dictionary with a count of each alphabet that makes up the string
+counter = Counter('superfluous')
+print(counter)
+print(counter['u'])
+
+# We can also use the Counter collection for other iterables like lists
+counter = Counter(['gaurav', 'keswani', 'gaurav', 'yelp', 'snowflake', 'yelp', 'gaurav'])
+print(counter)
+
+# Find the most frequently occuring item in the counter
+print(counter.most_common(1))
+print(counter.most_common(2))
+
+# Get an iterator of the items that make up the counter
+print(counter.elements())
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

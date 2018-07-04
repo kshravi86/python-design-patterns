@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+import copy
+
+"""Shallow Copy:
+- By "shallow copying" it means the content of the dictionary is not copied by value, but just creating a new reference.
+- a and b will become two isolated objects, but their contents still share the same reference.
+"""
+a = {1: [1,2,3]}
+b = a.copy()
+print (a, b)                              # ({1: [1, 2, 3]}, {1: [1, 2, 3]})
+a[1].append(4)
+print (a, b)                              # ({1: [1, 2, 3, 4]}, {1: [1, 2, 3, 4]})
+
+""" Deep Copy:
+- A deep copy will copy all contents by value
+- a and b's structure and content become completely isolated.
+"""
+
+c = copy.deepcopy(a)
+print (a, c)                              # ({1: [1, 2, 3, 4]}, {1: [1, 2, 3, 4]})
+a[1].append(5)
+print (a, c)                              # ({1: [1, 2, 3, 4, 5]}, {1: [1, 2, 3, 4]})
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

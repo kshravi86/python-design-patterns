@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+Reference: https://en.wikipedia.org/wiki/Delegation_pattern
+
+"""
+
+
+class Delegator(object):
+    """
+    >>> delegator = Delegator(Delegate())
+    >>> delegator.do_something("nothing")
+    'Doing nothing'
+    >>> delegator.do_anything()
+
+    """
+
+    def __init__(self, delegate):
+        self.delegate = delegate
+
+    def __getattr__(self, name):
+        def wrapper(*args, **kwargs):
+            if hasattr(self.delegate, name):
+                attr = getattr(self.delegate, name)
+                if callable(attr):
+                    return attr(*args, **kwargs)
+        return wrapper
+
+
+class Delegate(object):
+
+    def do_something(self, something):
+        return "Doing %s" % something
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
+    
+    
+    
+        </code></pre>
+  </body>
+</html>		

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+
+
+
+#!/bin/python3
+
+def main():
+    # this prints the result value of testfunc(), which is a string
+    print(testfunc())
+    # this prints range(0, 25) because range() returns a range object
+    print(range(25))
+    # we can use the range object returned by rangefunc() as an iterator
+    for n in rangefunc(): print(n, end=' ')
+    print()
+
+def testfunc():
+    return 'This is a test function'
+
+def rangefunc():
+    return range(25)
+
+if __name__ == "__main__": main()
+
+
+
+
+        </code></pre>
+  </body>
+</html>		

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="prism.css" rel="stylesheet">
+  </head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+import operator
+
+# Sorting a dictionary by key
+my_dict = {
+    'z': 'q',
+    'b': 'r',
+    'y': 'a'
+}
+for key in sorted(my_dict):
+    print (key, ':', my_dict[key])
+"""
+Outputs:
+    b : r
+    y : a
+    z : q
+"""
+
+# Sort a Dictionary by Value
+my_dict = {
+    'z': 'q',
+    'b': 'r',
+    'y': 'a'
+}
+for key, value in sorted(my_dict.items(), key=operator.itemgetter(1)):
+    print (key, ':', value)
+"""
+Outputs:
+    y : a
+    z : q
+    b : r
+"""
+
+# Sort a Dictionary by a Child List's Value
+my_dict = {
+    'q': [6, 'a'],
+    'z': [18, 't'],
+    'a': [3, 'r']
+}
+for key, value in sorted(my_dict.items(), key=lambda kvt: kvt[1][0]):
+    print (key, ':', value)
+"""
+Outputs:
+    a : [3, 'r']
+    q : [6, 'a']
+    z : [18, 't']
+"""
+
+# Sort a Dictionary by a Child Dictionary's Value
+my_dict = {
+    'q': {'age': 32},
+    'z': {'age': 54},
+    'a': {'age': 96}
+}
+for key, value in sorted(my_dict.items(), key=lambda kvt: kvt[1]['age']):
+    print (key, ':', value)
+"""
+Outputs:
+    q : {'age': 32}
+    z : {'age': 54}
+    a : {'age': 96}
+"""
+
+
+        </code></pre>
+  </body>
+</html>		
