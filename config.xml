@@ -3,7 +3,7 @@
 	id = "com.mycompany.myphonegapapp91827"
     versionCode = "12"
     version = "2.4"
-	android-versionCode="104072"
+	android-versionCode="104073"
 xmlns="http://www.w3.org/ns/widgets"
 xmlns:gap="http://phonegap.com/ns/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
